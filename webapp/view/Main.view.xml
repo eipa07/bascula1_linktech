@@ -1,0 +1,473 @@
+<mvc:View
+    controllerName="zqmed03bascula.zqmed03bascula.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    xmlns:table="sap.ui.table"
+    xmlns:l="sap.ui.layout"
+>
+     <tnt:ToolHeader>
+        <ToolbarSpacer />
+        <Title
+            titleStyle="H4"
+            text="{i18n>title}"
+            class="sapUiSmallMargin"
+            id="titleText"
+        />
+        <ToolbarSpacer />
+    </tnt:ToolHeader> 
+    <Page
+        id="page"
+        title="{i18n>title}"
+        showHeader="false"
+    >
+        <content>
+            <FlexBox
+                height=""
+                alignItems="Center"
+                justifyContent="Center"
+            >
+                <Title
+                    level="H1"
+                    text="Products"
+                />
+            </FlexBox>
+
+            <table:Table
+                id="MainView_Table_Header"
+                rows="{headerModel>/}"
+                selectionMode="Single"
+                paste="onPaste"
+                ariaLabelledBy="title"
+                enableCellFilter="true"
+                rowMode="Interactive"
+                
+            >
+                <table:columns>
+                    <table:Column
+                        filterProperty="Estado"
+                        sortProperty="Estado"
+                        id="MainView_Column01_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label01_Header"
+                            text="Estado"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text01_Header"
+                                text="{headerModel>Estado}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+                    <table:Column
+                        filterProperty="Fecha"
+                        sortProperty="Fecha"
+                        id="MainView_Column02_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label02_Header"
+                            text="Fecha"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text02_Header"
+                                text="{headerModel>Fecha}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+                    <table:Column
+                        filterProperty="Tipo"
+                        sortProperty="Tipo"
+                        id="MainView_Column03_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label03_Header"
+                            text="Tipo"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text03_Header"
+                                text="{headerModel>Tipo}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="Docto"
+                        sortProperty="Docto"
+                        id="MainView_Column04_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label04_Header"
+                            text="Docto"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text04_Header"
+                                text="{headerModel>Docto}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="Prov"
+                        sortProperty="Prov"
+                        id="MainView_Column05_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label05_Header"
+                            text="Prov"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text05_Header"
+                                text="{headerModel>Prov}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="Nombre"
+                        sortProperty="Nombre"
+                        id="MainView_Column06_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label06_Header"
+                            text="Nombre"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text06_Header"
+                                text="{headerModel>Nombre}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="Placas"
+                        sortProperty="Placas"
+                        id="MainView_Column07_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label07_Header"
+                            text="Placas"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text07_Header"
+                                text="{headerModel>Placas}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="Descripcion"
+                        sortProperty="Descripcion"
+                        id="MainView_Column08_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label08_Header"
+                            text="Descripcion"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text08_Header"
+                                text="{headerModel>Descripcion}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="Chofer"
+                        sortProperty="Chofer"
+                        id="MainView_Column09_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label09_Header"
+                            text="Chofer"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text09_Header"
+                                text="{headerModel>Chofer}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="Kg_Bruto"
+                        sortProperty="Kg_Bruto"
+                        id="MainView_Column10_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label10_Header"
+                            text="Kg. Bruto"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text10_Header"
+                                text="{headerModel>Kg_Bruto}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="Kg_Neto"
+                        sortProperty="Kg_Neto"
+                        id="MainView_Column11_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label11_Header"
+                            text="Kg. Neto"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text11_Header"
+                                text="{headerModel>Kg_Neto}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="Kg_Tara"
+                        sortProperty="Kg_Tara"
+                        id="MainView_Column12_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label12_Header"
+                            text="Kg. Tara"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text12_Header"
+                                text="{headerModel>Kg_Tara}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="Kg_Tara_Adic"
+                        sortProperty="Kg_Tara_Adic"
+                        id="MainView_Column13_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label13_Header"
+                            text="Kg. Tara Adic."
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text13_Header"
+                                text="{headerModel>Kg_Tara_Adic}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="Vl_Total"
+                        sortProperty="Vl_Total"
+                        id="MainView_Column14_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label14_Header"
+                            text="Vl Total"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text14_Header"
+                                text="{headerModel>Vl_Total}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="Moneda"
+                        sortProperty="Moneda"
+                        id="MainView_Column15_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label15_Header"
+                            text="Moneda"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text15_Header"
+                                text="{headerModel>Moneda}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="Serie"
+                        sortProperty="Serie"
+                        id="MainView_Column16_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label16_Header"
+                            text="Serie"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text16_Header"
+                                text="{headerModel>Serie}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="T_O"
+                        sortProperty="T_O"
+                        id="MainView_Column17_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label17_Header"
+                            text="T.O."
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text17_Header"
+                                text="{headerModel>T_O}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column
+                        filterProperty="Usuario"
+                        sortProperty="Usuario"
+                        id="MainView_Column18_Header"
+                        width="auto"
+                    >
+                        <Label
+                            id="MainView_Label18_Header"
+                            text="Usuario"
+                        />
+                        <table:template>
+                            <Text
+                                id="MainView_Text18_Header"
+                                text="{headerModel>Usuario}"
+                                wrapping="true"
+                            />
+                        </table:template>
+                    </table:Column>
+                </table:columns>
+                <table:footer>
+                    <HBox>
+                        <ToolbarSpacer width="3rem" />
+                        <Button
+                            type="Ghost"
+                            text="Incluir"
+                            press="onPressIncluir"
+                            ariaDescribedBy="defaultButtonDescription genericButtonDescription"
+                        >
+                            <layoutData>
+                                <FlexItemData growFactor="1" />
+                            </layoutData>
+                        </Button>
+                        <Button
+                            type="Ghost"
+                            text="Modificar"
+                            press="onPress"
+                            ariaDescribedBy="acceptButtonDescription genericButtonDescription"
+                        >
+                            <layoutData>
+                                <FlexItemData growFactor="1" />
+                            </layoutData>
+                        </Button>
+                        <Button
+                            type="Ghost"
+                            text="Eliminar"
+                            press="onPress"
+                            ariaDescribedBy="rejectButtonDescription genericButtonDescription"
+                        >
+                            <layoutData>
+                                <FlexItemData growFactor="1" />
+                            </layoutData>
+                        </Button>
+                        <Button
+                            type="Ghost"
+                            text="Actualizar"
+                            press=""
+                            ariaDescribedBy="comingSoonButtonDescription genericButtonDescription"
+                        >
+                            <layoutData>
+                                <FlexItemData growFactor="1" />
+                            </layoutData>
+                        </Button>
+                        <Button
+                            type="Ghost"
+                            text="Imprimir"
+                            press="onPress"
+                            ariaDescribedBy="comingSoonButtonDescription genericButtonDescription"
+                        >
+                            <layoutData>
+                                <FlexItemData growFactor="1" />
+                            </layoutData>
+                        </Button>
+                        <Button
+                            type="Ghost"
+                            text="Segundo Peso"
+                            press="onPress"
+                            ariaDescribedBy="comingSoonButtonDescription genericButtonDescription"
+                        >
+                            <layoutData>
+                                <FlexItemData growFactor="1" />
+                            </layoutData>
+                        </Button>
+                        <Button
+                            text="Filtro"
+                            press="onPress"
+                            ariaDescribedBy="comingSoonButtonDescription genericButtonDescription"
+                        >
+                            <layoutData>
+                                <FlexItemData growFactor="1" />
+                            </layoutData>
+                        </Button>
+                    </HBox>
+                </table:footer>
+            </table:Table>
+
+           
+        </content>
+        <footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button type="Accept" text="Accept"/>
+				<Button type="Reject" text="Reject"/>
+			</OverflowToolbar>
+		</footer>
+    </Page>
+</mvc:View>

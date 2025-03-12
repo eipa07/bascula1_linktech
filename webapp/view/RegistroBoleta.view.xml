@@ -1,0 +1,167 @@
+<mvc:View
+    controllerName="zqmed03bascula.zqmed03bascula.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    xmlns:table="sap.ui.table"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+>
+    <tnt:ToolHeader>
+    <Button text="{i18n>detailview.regresar}" press="goBackBtn"/>
+        <ToolbarSpacer />
+        <Title
+            titleStyle="H4"
+            text="{i18n>titleRegistroBoleta}"
+            class="sapUiSmallMargin"
+            id="titleText"
+        />
+        <ToolbarSpacer />
+    </tnt:ToolHeader>
+    <Page
+        id="pageRegistroBoleta"
+        title="{i18n>title}"
+        showHeader="false"
+    >
+        <content>
+            <IconTabBar
+                id="DocumentoTabBar"
+                expanded="true"
+                select=".onFilterSelect"
+                class="sapUiResponsiveContentPadding"
+            >
+                <items>
+                    <IconTabFilter
+                        text="{i18n>documento}"
+                        key="info"
+                    >
+                        <!-- Tab 1 Documento -->
+
+                        <f:Form
+                            id="FormDisplay354"
+                            editable="false"
+                        >
+                            <f:layout>
+                                <f:ResponsiveGridLayout
+                                    labelSpanXL="4"
+                                    labelSpanL="4"
+                                    labelSpanM="12"
+                                    labelSpanS="12"
+                                    adjustLabelSpan="false"
+                                    emptySpanXL="0"
+                                    emptySpanL="0"
+                                    emptySpanM="0"
+                                    emptySpanS="0"
+                                    columnsXL="3"
+                                    columnsL="3"
+                                    columnsM="3"
+                                    singleContainerFullSize="false"
+                                />
+                            </f:layout>
+                            <f:formContainers>
+                                <f:FormContainer >
+                                    <f:formElements>
+                                        <f:FormElement label="{i18n>registroboletaview.documento}">
+                                            <f:fields>
+                                                <Input
+                                                    value=""
+                                                    id="name"
+                                                />
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="{i18n>registroboletaview.fecha}">
+                                            <f:fields>
+                                                <Input value="{Street}" />
+                                                
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="{i18n>registroboletaview.centro}">
+                                            <f:fields>
+                                                
+                                                <Input value="{City}" />
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="{i18n>registroboletaview.claseMovimiento}">
+                                            <f:fields>
+                                                
+                                                <Input value="{City}" />
+                                            </f:fields>
+                                        </f:FormElement>
+                                    </f:formElements>
+                                </f:FormContainer>
+                                <f:FormContainer >
+                                    <f:formElements>
+                                        <f:FormElement label="{i18n>registroboletaview.proveedor}">
+                                            <f:fields>
+                                                <Input value="{Url}" />
+                                            </f:fields>
+                                        </f:FormElement>
+                                        <f:FormElement label="{i18n>registroboletaview.moneda}">
+                                            <f:fields>
+                                                <Input value="{Twitter}" />
+                                            </f:fields>
+                                        </f:FormElement>
+                                         <f:FormElement label="{i18n>registroboletaview.usuario}">
+                                            <f:fields>
+                                                <Input value="{Twitter}" />
+                                            </f:fields>
+                                        </f:FormElement>
+                                    </f:formElements>
+                                </f:FormContainer>
+                            </f:formContainers>
+                        </f:Form>
+                    </IconTabFilter>
+                    <IconTabFilter
+                        text="{i18n>transporte}"
+                        key="attachments"
+                    >
+                        <Text text="Attachments go here ..." />
+                    </IconTabFilter>
+                    <IconTabFilter
+                        text="{i18n>complemento}"
+                        key="notes"
+                    >
+                        <Text text="Notes go here ..." />
+                    </IconTabFilter>
+                    <IconTabFilter
+                        text="{i18n>pesosComplemento}"
+                        key="people"
+                    >
+                        <Text text="People content goes here ..." />
+                    </IconTabFilter>
+                    <IconTabFilter
+                        text="{i18n>informacion}"
+                        key="people"
+                    >
+                        <Text text="People content goes here ..." />
+                    </IconTabFilter>
+                    <IconTabFilter
+                        text="{i18n>pesajeTransporte}"
+                        key="people"
+                    >
+                        <Text text="People content goes here ..." />
+                    </IconTabFilter>
+                    <IconTabFilter
+                        text="{i18n>controlBascula}"
+                        key="people"
+                    >
+                        <Text text="People content goes here ..." />
+                    </IconTabFilter>
+                    <IconTabFilter
+                        text="{i18n>valorDocumento}"
+                        key="people"
+                    >
+                        <Text text="People content goes here ..." />
+                    </IconTabFilter>
+                    <IconTabFilter
+                        text="{i18n>observaciones}"
+                        key="people"
+                    >
+                        <Text text="People content goes here ..." />
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,42 @@
+[
+{
+    "Estado": "Estado_01",
+    "Fecha": "20250101",
+    "Tipo": "A",
+    "Docto": "1000",
+    "Prov": "01",
+    "Nombre": "Ana",
+    "Placas": "ABC100",
+    "Descripcion": "Descripcion",
+    "Chofer": "Chofer_01",
+    "Kg_Bruto": "100",
+    "Kg_Neto": "50",
+    "Kg_Tara": "30",
+    "Kg_Tara_Adic": "40",
+    "Vl_Total": "100",
+    "Moneda": "MXN",
+    "Serie": "X12345",
+    "T.O.": "TO-1",
+    "Usuario": "user_01"
+},
+{
+    "Estado": "Estado_02",
+    "Fecha": "20250102",
+    "Tipo": "B",
+    "Docto": "2000",
+    "Prov": "01",
+    "Nombre": "Ana",
+    "Placas": "ABC100",
+    "Descripcion": "Descripcion",
+    "Chofer": "Chofer_01",
+    "Kg_Bruto": "100",
+    "Kg_Neto": "50",
+    "Kg_Tara": "30",
+    "Kg_Tara_Adic": "40",
+    "Vl_Total": "100",
+    "Moneda": "MXN",
+    "Serie": "X12345",
+    "T_O": "TO-1",
+    "Usuario": "user_01"
+}
+]
